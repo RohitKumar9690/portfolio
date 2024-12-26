@@ -49,6 +49,42 @@
     transform: scale(1.15);
 }
 
+
+
+  abbr {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+abbr:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 3px;
+    left: 20%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 13px;
+    white-space: nowrap;
+    z-index: 1;
+  
+   
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-out forwards; 
+  }
+  
+  /* Keyframe for fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-10px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0); 
+    }
+  }
+  
 @media screen and (max-width: 1040px), (max-height: 550px) {
 
     .skill-container {

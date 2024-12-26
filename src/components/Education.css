@@ -1,0 +1,124 @@
+.education-section {
+    padding: 50px 15vw;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-out;
+}
+
+.education-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.education-item {
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-degree {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.education-duration {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.education-university {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.education-courses {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education-course {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 30px 5vw;
+    }
+
+    .education-title {
+        font-size: 28px;
+    }
+
+    .education-degree {
+        font-size: 20px;
+    }
+
+    .education-university {
+        font-size: 16px;
+    }
+    .education-item:hover {
+        transform: translateY(-15px);
+        box-shadow: 0px 20px 40px rgba(241, 241, 241, 0.788);
+    }
+    
+    .education-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .education-section {
+        padding: 50px 10vw;
+    }
+
+    .education-item {
+        transition: transform 0.7s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+    }
+
+    .education-item:hover {
+        transform: translateY(-15px);
+        box-shadow: 0px 20px 40px rgba(241, 241, 241, 0.788);
+    }
+}

@@ -1,0 +1,136 @@
+/* Container for the entire experience section */
+.experience-section {
+    padding: 50px 15vw;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Title of the section */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Container for individual experience items */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Each experience item styling */
+.experience-item {
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for the experience item */
+.experience-item:hover {
+    transform: translateY(-10px);
+    /* background-color: rgb(77, 76, 76); */
+}
+
+/* Job title and duration styling */
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-job-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.experience-duration {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+/* Company name styling */
+.experience-company {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Responsibilities list styling */
+.experience-responsibilities {
+    list-style-type:circle;
+    padding-left: 20px;
+}
+
+.experience-task {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+/* Keyframe Animation for FadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 30px 5vw;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .experience-job-title {
+        font-size: 20px;
+    }
+
+    .experience-company {
+        font-size: 16px;
+    }
+    .experience-item:hover {
+        transform: translateY(-15px);
+        box-shadow: 0px 20px 40px rgba(241, 241, 241, 0.788);
+    }
+    /* Stacking experience items in smaller screens */
+    .experience-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* For larger screens (e.g., desktops) */
+@media (min-width: 1024px) {
+    .experience-section {
+        padding: 50px 10vw;
+    }
+
+    .experience-item {
+        transition: transform 0.7s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+    }
+
+    .experience-item:hover {
+        transform: translateY(-15px);
+        box-shadow: 0px 20px 40px rgba(241, 241, 241, 0.788);
+    }
+}

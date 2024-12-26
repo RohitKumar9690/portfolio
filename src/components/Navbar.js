@@ -37,7 +37,7 @@ export default function Navbar() {
           <Link
           className="navLink"
             activeClass="active"
-            to="project"
+            to="projects"
             spy={true}
             smooth={true}
             duration={30}
@@ -52,6 +52,25 @@ export default function Navbar() {
             smooth={true}
             duration={30}
           >About</Link>
+        </li>
+        <li>
+          <Link
+          className="navLink"
+            activeClass="active"
+            to="education"
+            spy={true}
+            smooth={true}
+            duration={30}
+          >Education</Link>
+        </li>
+        <li>
+          <Link
+          className="navLink" 
+            activeClass="active"
+            to="experience"
+            spy={true}
+            smooth={true}
+            duration={30}>Experience</Link>
         </li>
         <li>
           <Link

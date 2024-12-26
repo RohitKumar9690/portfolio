@@ -2,12 +2,15 @@
     display: flex;
     margin: 80px 13vw 0 18vw;
     padding-top: 60px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for the container */
 }
 
 .profile-photo {
     margin-left: 50px;
     height: fit-content;
     padding: 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
 }
 
 .profile-photo .heading {
@@ -20,28 +23,32 @@
 .profile-photo .img {
     width: 100%;
     z-index: -3;
+    transition: transform 0.3s ease-in-out;
 }
 
- .about-container .name {
+.profile-photo .img:hover {
+    transform: scale(1.1); /* Hover animation to scale up */
+}
+
+.about-container .name {
     line-height: 85px;
     position: absolute;
     right: 6.5vw;
     padding-top: 75px;
     width: 110px;
     overflow-wrap: break-word;
-    color:#ec745f;
+    color: #ec745f;
     text-transform: uppercase;
     z-index: 0;
     font-size: 100px;
     font-family: 'Intro', sans-serif;
     font-weight: 800;
-    text-transform: uppercase;
-    background: -webkit-linear-gradient(-86deg, #e4a479  5%, #84e1de 53%, #63c754 91%);
+    background: -webkit-linear-gradient(-86deg, #e4a479 5%, #84e1de 53%, #63c754 91%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
     background-clip: text;
-    /* color: #2c2c2c; */
     color: black;
+    transition: transform 0.3s ease-in-out; /* Added transition for smoother resizing */
 }
 
 .about-container .aboutMe-text {
@@ -49,6 +56,7 @@
     font-weight: 200;
     color: #fff;
     height: fit-content;
+    animation: fadeIn 1.2s ease-in-out; /* Fade-in animation */
 }
 
 .aboutMe-text span {
@@ -56,22 +64,36 @@
 }
 
 .about-container .aboutMe-text h3 {
-    color: #fff;    
+    color: #fff;
     font-size: 36px;
     font-weight: 500;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in for the heading */
 }
 
 .about-container .aboutMe-text .resume {
     color: #ec745f;
-    border-bottom: 2.5px solid#ec745f;
+    border-bottom: 2.5px solid #ec745f;
     transition: all 0.3s ease-in-out;
     display: inline-block;
     font-weight: 800;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.8s ease-in-out forwards; /* Fade-in animation for resume */
 }
 
 .about-container .aboutMe-text .resume:hover {
     transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -90,6 +112,7 @@
     .about-container {
         flex-direction: column;
         align-items: center;
+        margin: 60px 10vw; /* Adjust margins */
     }
 
     .heading, .about-container .name {
@@ -105,6 +128,11 @@
         margin-top: 50px;
         max-width: 400px;
     }
+
+    .profile-photo .img {
+        max-width: 250px;
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -113,4 +141,21 @@
         margin-top: 0;
         padding-top: 70px;
     }
+
+    .about-container .aboutMe-text {
+        font-size: 14px;
+        padding: 0 20px; /* Add some padding for better layout on small screens */
+    }
+
+    .about-container .name {
+        font-size: 60px;
+        right: 4vw;
+    }
 }
+
+/* Add a smooth hover effect for the profile photo */
+.profile-photo:hover {
+    transform: scale(1.05); /* Smooth scaling effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
