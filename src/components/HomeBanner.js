@@ -9,11 +9,11 @@ export default function HomeBanner({id}) {
             <div className="wrapper">
               <div className="name">Rohit Kumar</div>
               <div className="staticTitle">
-                Designer
+                MERN Stack
                 <div className='hrLine'></div>
               </div>
               <ul className="dynamicTitle">
-                <li>+<span>Developer</span></li>
+                <li><span>Developer</span></li>
               </ul>
               <a className='btn' href="https://www.linkedin.com/in/rohit-kumar-a40901274" target="_blank" rel="noopener noreferrer">Hire Me</a>
             </div>
